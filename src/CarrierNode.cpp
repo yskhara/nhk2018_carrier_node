@@ -34,14 +34,12 @@ void CarrierNode::Control(void)
 		this->base_retract();
 
 		this->_m_status = CarrierStatus::disarmed;
-
 		break;
 
 	case CarrierCommands::pickup_cmd:
 		this->chuck_right();
 		this->chuck_left();
 		this->_m_status = CarrierStatus::pickedup;
-
 		break;
 
 	case CarrierCommands::deliver_r_cmd:
@@ -50,7 +48,6 @@ void CarrierNode::Control(void)
 			this->base_retract();
 			this->_m_status = CarrierStatus::delivering_r;
 		}
-
 		break;
 
 	case CarrierCommands::deliver_l_cmd:
